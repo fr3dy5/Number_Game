@@ -4,11 +4,11 @@ echo "Welcome to the Number Guessing Game!"
 echo "Guess the number (1-10) or enter '0' to quit:($attempts)"
 read -p "Please enter a number:" guess
 
-attempts= 1
-secret_number= $((RANDOM % 10 ) + 1)
-attempts= (($attempts) + 1)
-winner= echo "Congratulations! You the guessed the correct number in ($attempts) attempts."
-later= echo "Thanks for playing. Goodbye!"
+attempts=1
+secret_number=$((RANDOM % 10 ) + 1)
+attempts=(($attempts) + 1)
+winner=echo "Congratulations! You the guessed the correct number in ($attempts) attempts."
+later=echo "Thanks for playing. Goodbye!"
 
 until [["$guess" -eq "0"]]; then
     later;
