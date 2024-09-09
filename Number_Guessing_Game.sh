@@ -14,7 +14,7 @@ if [["$guess" -eq "0"]]; then
     later;
     elif [["$guess" -lt "$secret_number"]]; then
         echo "Too low! Try again.";
-    else [[ "$guess" -gt "$secret_number"]]; then
+    elif [[ "$guess" -gt "$secret_number"]]; then
         echo "Too high! Try again.";
     else [["$guess" -eq "secret_number"]]; then
         winner;
