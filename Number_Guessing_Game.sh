@@ -16,4 +16,4 @@ elif [[ "$guess" -gt "$secret_number" ]]; then
     echo "Too high! Try again.";
 else [[ "$guess" -eq "$secret_number" ]]; then
     echo "Congratulations! You the guessed the correct number in $attempts attempts.";
-done
+fi
