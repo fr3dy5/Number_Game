@@ -10,13 +10,12 @@ attempts=(($attempts) + 1)
 winner=echo "Congratulations! You the guessed the correct number in ($attempts) attempts."
 later=echo "Thanks for playing. Goodbye!"
 
-until [["$guess" -eq "0"]]; then
+if [["$guess" -eq "0"]]; then
     later;
-    done
-        elif [["$guess" -eq "secret_number"]]; then
-            winner;
-        elif [["$guess" -lt "$secret_number"]]; then
-            echo "Too low! Try again.";
-        else [[ "$guess" -gt "$secret_number"]]; then
-            echo "Too high! Try again.";
+    elif [["$guess" -lt "$secret_number"]]; then
+        echo "Too low! Try again.";
+    else [[ "$guess" -gt "$secret_number"]]; then
+        echo "Too high! Try again.";
+    else [["$guess" -eq "secret_number"]]; then
+        winner;
 done
